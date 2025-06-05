@@ -54,6 +54,29 @@
 
     </main>
 
+     <!--El modal aparece encima  o entrende del contenido-->
+     <dialog id="mdAgregar">
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrar"></a>
+                <h3>Agregar Integrante</h3>
+            </header>
+
+            <form id="frmAgregar">
+                <input type="text" id="txtNombre" placeholder="Nombre" required>
+                <input type="text" id="txtApellido" placeholder="Apellido" required>
+                <input type="email" id="txtEmail" placeholder="Correo Electronico" required>
+
+                <button type="submit" class="contrast">
+                    Guardar
+                </button>
+            </form>
+        </article>
+    </dialog>
+
+
+
+
     <!-- BOTON FLOTANTE para agregar Registros -->
      <button id="btnAgregar" class="add-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-plus-icon lucide-user-round-plus"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6"/><path d="M22 19h-6"/></svg>
