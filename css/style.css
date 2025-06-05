@@ -12,7 +12,7 @@
     width: 70px; 
     height: 70px;  /* tamaño del boton para q quede simetrico*/
 
-    box-shadow: 0 4px 10px rgb(78, 69, 69); /*sombra*/
+    box-shadow: 0 4px 10px rgb(65, 58, 58); /*sombra*/
 
     display: flex; /* activamos flexbox*/
 
