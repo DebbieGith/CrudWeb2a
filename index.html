@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gestiòn de Equipo Expo</title>
+    <!--HOJA De estilos Pico CSS -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    
+
+    <!--HOJA De estilos PROPIA-->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <!--"Container" centra el contenido y limita el ancho-->
@@ -26,22 +31,33 @@
     <main class="container">
         <h2>Integrantes del Equipo</h2>
 
-        <table id="tabla" class="overflow-auto">
-            <thead>
-                <!--"tr" - Table Row - Fila-->
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Correo Electrónico</th>
-                    <th>Acciones</th> <!-- Botones para Editar y Eliminar -->
-                </tr>
-            </thead>
-            <tbody>
-                <!--Aquí van los registros que vienen por la API-->
-            </tbody>
-        </table>
+        <div class="tabla-scroll">
+            <table id="tabla" class="overflow-auto">
+                <thead>
+                    <!--"tr" - Table Row - Fila-->
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo Electrónico</th>
+                        <th>Acciones</th> <!-- Botones para Editar y Eliminar -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Aquí van los registros que vienen por la API-->
+                </tbody>
+            </table>
+        </div>
+
+
+
+
     </main>
+
+    <!-- BOTON FLOTANTE para agregar Registros -->
+     <button id="btnAgregar" class="add-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-plus-icon lucide-user-round-plus"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6"/><path d="M22 19h-6"/></svg>
+     </button>
 
     <script src="js/script.js"></script>
 </body>
