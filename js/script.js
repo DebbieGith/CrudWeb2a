@@ -32,7 +32,7 @@ function MostrarDatos(datos){
                 <td>${integrante.correo}</td>
                 <td>
                     <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button onclick="EliminarPersona(${integrante.id})">Eliminar</button>
                 </td>
             </tr>
         `;
@@ -96,3 +96,20 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
         alert("El registro no pudo ser agregado")
     }
 });
+
+
+//Funcion para borrar registros
+//se le pone el async para que el await de abajo no nos de error, para q no sea tan tardado
+async function EliminarPersona(id){
+    const confirmacion = confirm("¿Realmente deseas eliminar el registro?");
+
+    //Validamos si el usuario si escogio borrar
+    if(confirmacion){
+        await fetch(`${API_URL}/${id}`, {
+            method: "DELETE"
+        });
+
+        //Recargar tabla despues de eliminar a alguien
+        ObtenerIntegrantes();
+    }
+}
