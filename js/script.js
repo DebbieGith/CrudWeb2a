@@ -91,4 +91,8 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
         //Recargamos la tabla
         ObtenerIntegrantes();
     }
+    else{
+        //En caso de que la API devuelva un codigo diferente a 200-299
+        alert("El registro no pudo ser agregado")
+    }
 });
