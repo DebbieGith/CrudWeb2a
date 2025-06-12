@@ -75,6 +75,27 @@
     </dialog>
 
 
+    <!-- Cuadro de Dialogo para editar-->
+    <dialog id="mdEditar">
+        <article>
+            <header>
+                <!-- X para cerrar-->
+                <a href="#" class="close" id="btnCerrarEditar"></a>
+                <h3>Editar Integrante</h3>
+            </header>
+
+            <form id="frmEditar">
+                <input type="hidden" id="txtIdEditar"> <!--Campo oculto para guardar el ID-->
+                <input type="text" id="txtNombreEditar" placeholder="Nombre" required>
+                <input type="text" id="txtApellidoEditar" placeholder="Apellido" required>
+                <input type="email" id="txtEmailEditar" placeholder="Correo Electronico" required>
+
+                <button type="submit" class="contrast">
+                    Actualizar
+                </button>
+            </form>
+        </article>
+    </dialog>
 
 
     <!-- BOTON FLOTANTE para agregar Registros -->
